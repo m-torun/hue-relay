@@ -1,0 +1,23 @@
+{
+  "relay_ip": "192.168.1.250",
+  "relay_mac": "02:00:00:00:00:01",
+  "name": "Hue Relay",
+  "real_bridge": "192.168.1.10",
+  "key_file": "/secrets/hue-entertainment.json",
+  "data_dir": "/data",
+  "link_open": true,
+  "gains": {
+    "00000000-0000-0000-0000-000000000000": [
+      0.4,
+      0.3,
+      0.5,
+      1.0,
+      1.0,
+      1.0,
+      1.1
+    ]
+  },
+  "outside_sync": [
+    "00000000-0000-0000-0000-000000000000"
+  ]
+}

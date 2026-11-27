@@ -1,0 +1,61 @@
+name: Bug report
+description: Something does not work as described.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please remove keys, usernames and anything else private from logs.
+        Security problems go through the Security tab, not here.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: hue-relay version
+      description: Output of `hue-relay --version`, or the commit you built.
+    validations:
+      required: true
+  - type: dropdown
+    id: run
+    attributes:
+      label: How you run it
+      options:
+        - Docker with macvlan
+        - Docker, other network setup
+        - The binary directly
+    validations:
+      required: true
+  - type: input
+    id: bridge
+    attributes:
+      label: Hue bridge software version
+      description: In the Hue app under Settings > Bridges, or `swversion` from the bridge's /api/config.
+  - type: input
+    id: client
+    attributes:
+      label: Hue Sync client
+      description: The device and its Hue Sync app version (for example "a TV, Hue Sync app 1.2").
+  - type: input
+    id: lights
+    attributes:
+      label: Lights in the entertainment area
+      description: Model and number of channels (`hue-relay list-areas` shows the channels).
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relay log
+      description: The relay's log around the problem.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues for this problem.
+          required: true
